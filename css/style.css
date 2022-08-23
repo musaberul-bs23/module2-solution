@@ -1,0 +1,51 @@
+.page-title {
+    text-align: center;
+}
+.parent {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
+
+.parent .child {
+    background-color: lightslategray;
+    border: 1px solid black;
+    padding: 15px;
+    position: relative;
+    padding-top: 40px;
+}
+
+.parent .child h4 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px 30px;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.parent .child-1 h4 {
+    background-color: bisque;
+}
+.parent .child-2 h4 {
+    background-color: yellowgreen;
+}
+.parent .child-3 h4 {
+    background-color: paleturquoise;
+}
+
+@media screen and (max-width: 991px) {
+    .parent .child-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .parent .child-1,
+    .parent .child-2,
+    .parent .child-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
